@@ -1,0 +1,109 @@
+{
+    "questions": [
+        {
+            "question": "Who won The Oscar reward the most times?",
+            "answers": [
+                {
+                    "answer": "Walt Disney",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Christopher Nolan",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Sam Raimi",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "Leo Di Caprio",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "When The Shawshank Redemption was filmed?",
+            "answers": [
+                {
+                    "answer": "1990",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "2001",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "1994",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "1950",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "Which Ukrainian film got The Oscar reward?",
+            "answers": [
+                {
+                    "answer": "Mavka: The Forest Song",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "20 days in Mariupol",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "Shchedryk",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "No one",
+                    "isCorrect": false
+                }
+            ]
+        },
+        {
+            "question": "What is the scariest film ever?",
+            "answers": [
+                {
+                    "answer": "Halloween",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "The Ring",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "The Shining",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "The Exorcist",
+                    "isCorrect": true
+                }
+            ]
+        },
+        {
+            "question": "What year was the first film made?",
+            "answers": [
+                {
+                    "answer": "1988",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "1888",
+                    "isCorrect": true
+                },
+                {
+                    "answer": "1793",
+                    "isCorrect": false
+                },
+                {
+                    "answer": "1743",
+                    "isCorrect": false
+                }
+            ]
+        }
+    ]
+}
