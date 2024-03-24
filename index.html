@@ -6,13 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Form</title>
     <style>
+        html {
+            background-color: #1f2833;
+            background-position: center;
+            background-size: cover;
+            color: #fff;
+        }
+
         body {
             display: flex;
             justify-content: center;
         }
 
         form {
-            margin: auto;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
         }
 
         label {
@@ -23,12 +33,41 @@
         input[type="number"] {
             width: 50px;
         }
+
+        .all-label {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 2px solid #45a29e;
+        }
+
+        .lang_radio,
+        .country_checkboxes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .all-inputs,
+        select {
+            width: 200px;
+            margin: 5px auto;
+            border-radius: 3px;
+            height: 20px;
+        }
+
+        button {
+            height: 40px;
+            width: 160px;
+            margin: 3px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
 <body>
     <form id="form">
-        <label for="movie">Choose your favorite movie genre:</label>
+        <label for="movie" class="all-label">Choose your favorite movie genre:</label>
         <select id="movie" name="movieGenre">
             <option value="Action">Action</option>
             <option value="Fantasy">Fantasy</option>
@@ -37,30 +76,35 @@
             <option value="Mystery">Mystery</option>
         </select>
 
-        <label>Which language do you prefer for watching movies?</label>
-        <input type="radio" name="language" value="English"> English
-        <input type="radio" name="language" value="Ukrainian"> Ukrainian
-        <input type="radio" name="language" value="Another"> Another
+        <label class="all-label" for="language">Which language do you prefer for watching movies?</label>
+        <div class="lang_radio">
+            <input type="radio" name="language" value="English" id="language"> English
+            <input type="radio" name="language" value="Ukrainian" id="language"> Ukrainian
+            <input type="radio" name="language" value="Another" id="language"> Another
+        </div>
 
-        <label>What country do the best movies?</label>
-        <input type="checkbox" name="country" value="USA"> USA
-        <input type="checkbox" name="country" value="France"> France
-        <input type="checkbox" name="country" value="Spain"> Spain
+        <label class="all-label" for="country">What country do the best movies?</label>
+        <div class="country_checkboxes">
+            <input type="checkbox" name="country" value="USA" id="country"> USA
+            <input type="checkbox" name="country" value="France" id="country"> France
+            <input type="checkbox" name="country" value="Spain" id="country"> Spain
+        </div>
 
-        <label for="cinemaTime">Write the date when you were in the cinema last time?</label>
-        <input type="datetime-local" id="cinemaTime" name="cinemaTime">
+        <label for="cinemaTime" class="all-label">Write the date when you were in the cinema last time?</label>
+        <input type="datetime-local" id="cinemaTime" name="cinemaTime" class="all-inputs">
 
-        <label for="averageScore">Rate the movie what you watched recently:</label>
-        <input type="number" id="averageScore" name="averageScore" min="1" max="10">
+        <label for="averageScore" class="all-label">Rate the movie what you watched recently:</label>
+        <input type="number" id="averageScore" name="averageScore" min="1" max="10" class="all-inputs">
 
-        <label for="favFilm">Write about your favourite film:</label>
+        <label for="favFilm" class="all-label">Write about your favourite film:</label>
         <textarea name="favFilm" id="favFilm" cols="30" rows="10"></textarea>
 
-        <label for="url">Input URL where you usually watch movies online: </label>
-        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30">
+        <label for="url" class="all-label">Input URL where you usually watch movies online: </label>
+        <input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30"
+            class="all-inputs">
 
-        <label for="food_choice">Food that you like to eat when you watch a movie:</label>
-        <input list="food" id="food_choice" name="food">
+        <label for="food_choice" class="all-label">Food that you like to eat when you watch a movie:</label>
+        <input list="food" id="food_choice" name="food" class="all-inputs">
         <datalist id="food">
             <option value="Chocolate">Chocolate</option>
             <option value="Chips">Chips</option>
@@ -69,17 +113,20 @@
             <option value="Another">Another</option>
         </datalist>
 
-        <label for="email">Enter your email:</label>
-        <input type="email" id="email" name="email">
+        <label for="email" class="all-label">Enter your email:</label>
+        <input type="email" id="email" name="email" class="all-inputs">
 
 
-        <label for="phone">Enter your phone number:</label>
-        <input type="tel" id="phone" name="phone">
-        <button type="submit">Submit</button>
-        <button id="actionFilterButton">Filter by Action Genre</button>
-        <button id="averageScoreFilterButton">Filter by Average Score < 5</button>
-                <button id="phoneNumberFilterButton">Filter by Phone Number (Starting with 099)</button>
-                <div id="displayArea"></div>
+        <label for="phone" class="all-label">Enter your phone number:</label>
+        <input type="tel" id="phone" name="phone" class="all-inputs">
+        <div class="all-buttons">
+            <button type="submit">Submit</button>
+            <button id="actionFilterButton">Filter by Action Genre</button>
+            <br>
+            <button id="averageScoreFilterButton">Filter by Average Score < 5</button>
+            <button id="phoneNumberFilterButton">Filter by Phone Number (Starting with 099)</button>
+        </div>
+        <div id="displayArea"></div>
 
     </form>
 
