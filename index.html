@@ -23,8 +23,10 @@
             justify-content: center;
             flex-direction: column;
             text-align: center;
-            width: 400px; /* Додайте цю властивість для фіксованої ширини */
-            margin: 0 auto; /* Додайте цю властивість для центрування по горизонталі */
+            width: 400px;
+            /* Додайте цю властивість для фіксованої ширини */
+            margin: 0 auto;
+            /* Додайте цю властивість для центрування по горизонталі */
         }
 
         label {
@@ -84,12 +86,32 @@
             text-align: center;
             color: #66fcf1;
         }
+
+        .svg-o {
+            margin-left: 430px;
+        }
+
+        .canvas {
+            display: block;
+            border: 2px solid;
+            margin: 0 auto;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+
+        .points {
+            width: 200px;
+            text-align: center;
+            margin: 10px auto;
+            border: 2px solid;
+            border-radius: 20px;
+        }
     </style>
 </head>
 
 <body>
     <form id="form">
-    <h1>Movie Form</h1>
+        <h1>Movie Form</h1>
         <label for="movie" class="all-label">Choose your favorite movie genre:</label>
         <select id="movie" name="movieGenre">
             <option value="Action">Action</option>
@@ -147,21 +169,44 @@
             <button id="actionFilterButton">Filter by Action Genre</button>
             <br>
             <button id="averageScoreFilterButton">Filter by Average Score < 5</button>
-            <button id="phoneNumberFilterButton">Filter by Phone Number (Starting with 099)</button>
+                    <button id="phoneNumberFilterButton">Filter by Phone Number (Starting with 099)</button>
         </div>
         <div id="displayArea"></div>
 
     </form>
     <div class="next-block-line"></div>
     <h1>Movie Quiz</h1>
-        <div id="quiz-container" class="quiz-container">
-            <div id="questions"></div>
-            <button id="submit-btn">Submit Answers</button>
-            <div id="result"></div>
-        </div>
-
+    <div id="quiz-container" class="quiz-container">
+        <div id="questions"></div>
+        <button id="submit-btn">Submit Answers</button>
+        <div id="result"></div>
+    </div>
+    <div class="next-block-line"></div>
+    <h1>Vector Image SVG</h1>
+    <div class="svg-o">
+        <svg viewBox="0 0 500 500">
+            <circle cx="150" cy="150" r="100" stroke="darkred" stroke-width="15" fill="none" />
+            <circle cx="150" cy="150" r="85" stroke="lightgray" stroke-width="15" fill="none" />
+            <circle cx="150" cy="150" r="70" stroke="darkred" stroke-width="15" fill="none" />
+            <circle cx="150" cy="150" r="70" stroke="darkred" stroke-width="15" fill="blue" />
+            <polygon points="150,50 
+                         173,120 
+                         242,120 
+                         185,160 
+                         200,230 
+                         150,190 
+                         100,230 
+                         115,160 
+                         58,120 
+                         127,120" fill="white" />
+        </svg>
+    </div>
+    <div class="next-block-line"></div>
+    
+    
     <script src="/localStorage.js"></script>
     <script src="/quiz.js"></script>
+    
 </body>
 
 </html>
