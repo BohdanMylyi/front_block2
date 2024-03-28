@@ -133,18 +133,6 @@ function updatePastScores(newScore) {
   if (pastScores.length > 5) {
     pastScores.shift();
   }
-  displayPastScores();
-}
-
-function displayPastScores() {
-  ctx.fillStyle = "#fff";
-  ctx.fillRect(canv.width - 150, 10, 130, 100);
-
-  ctx.fillStyle = "#000";
-  ctx.font = "16px Arial";
-  for (let i = 0; i < pastScores.length; i++) {
-    ctx.fillText(`Game ${i + 1}: ${pastScores[i]}`, canv.width - 140, 20 + (i * 20));
-  }
 }
 
 function move(e) {
