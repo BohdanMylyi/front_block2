@@ -91,7 +91,6 @@ function displayData(data) {
 <p>Movie Genre: ${data['movieGenre']}</p>
 <p>Language: ${data['language']}</p>
 <p>Average Score: ${data['averageScore']}</p>
-<!-- Додайте інші поля, які ви хочете відобразити -->
 `;
     displayArea.appendChild(dataDiv);
 }

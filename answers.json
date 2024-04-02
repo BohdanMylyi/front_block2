@@ -9,15 +9,15 @@
                 },
                 {
                     "answer": "Christopher Nolan",
-                    "isCorrect": false
+                    "isCorrect": true
                 },
                 {
                     "answer": "Sam Raimi",
-                    "isCorrect": false
+                    "isCorrect": true
                 },
                 {
                     "answer": "Leo Di Caprio",
-                    "isCorrect": false
+                    "isCorrect": true
                 }
             ]
         },
